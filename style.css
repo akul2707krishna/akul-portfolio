@@ -1,0 +1,369 @@
+/* =====================================
+   AKUL - DARK ACADEMIA PORTFOLIO
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #17110e;
+    color: #eee5d5;
+    font-family: Georgia, serif;
+    line-height: 1.8;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: rgba(23, 17, 14, 0.97);
+    border-bottom: 1px solid #59452c;
+}
+
+.logo {
+    color: #c5a46d;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #eee5d5;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6b77b;
+    text-shadow: 0 0 10px #c5a46d;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 10%;
+    gap: 45px;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.eyebrow {
+    color: #a88950;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 62px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #a88950,
+        #fff0c2,
+        #c5a46d,
+        #fff0c2,
+        #a88950
+    );
+    background-size: 250% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 250% center;
+    }
+}
+
+.hero h2 {
+    color: #c5a46d;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: #c9bda9;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 28px;
+    background: #a88950;
+    color: #17110e;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e0c38a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px #a8895033;
+}
+
+/* PROFILE PHOTO */
+
+.hero-circle {
+    width: 290px;
+    height: 370px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid #a88950;
+    border-radius: 150px 150px 12px 12px;
+    box-shadow: 0 0 30px #a8895022;
+    animation: float 4s ease-in-out infinite;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 85px 10%;
+    text-align: center;
+    border-top: 1px solid #a8895022;
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #c5a46d;
+    margin-bottom: 30px;
+}
+
+.section-text {
+    max-width: 750px;
+    margin: auto;
+    color: #c9bda9;
+}
+
+/* CARDS */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background: #211912;
+    border: 1px solid #6f5735;
+    border-radius: 7px;
+    padding: 30px;
+    max-width: 700px;
+    margin: 15px auto;
+    transition: 0.35s ease;
+}
+
+.card-container .card {
+    width: 280px;
+    margin: 0;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #c5a46d;
+    box-shadow: 0 10px 30px #a889501c;
+}
+
+.card h3 {
+    color: #c5a46d;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #c9bda9;
+}
+
+.year {
+    color: #a88950;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.tags {
+    margin-top: 18px;
+}
+
+.tags span {
+    display: inline-block;
+    color: #d6b77b;
+    border: 1px solid #6f5735;
+    border-radius: 20px;
+    padding: 3px 12px;
+    margin: 4px;
+    font-size: 12px;
+}
+
+/* CONTACT */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.contact-card {
+    width: 320px;
+    padding: 32px 25px;
+    background: #211912;
+    border: 1px solid #a88950;
+    border-radius: 8px;
+    transition: 0.35s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px #a8895022;
+}
+
+.contact-symbol {
+    font-size: 28px;
+    color: #c5a46d;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    color: #c5a46d;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #c9bda9;
+    margin-bottom: 14px;
+}
+
+.contact-card a {
+    color: #d6b77b;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: 0.3s;
+}
+
+.contact-card a:hover {
+    color: #fff0c2;
+    text-shadow: 0 0 8px #c5a46d;
+}
+
+/* FOOTER */
+
+footer {
+    background: #100c09;
+    border-top: 1px solid #59452c;
+    text-align: center;
+    padding: 25px;
+    color: #a99b85;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* SCROLL ANIMATION */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero-circle {
+        width: 230px;
+        height: 290px;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
